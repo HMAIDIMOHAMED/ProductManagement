@@ -14,7 +14,7 @@ export class CreateProductComponent implements OnInit {
     n_inventaire: '',
     affection: '',
     date_achat: '',
-    ref_bc_match:''
+    ref_bc_march:''
   };
 
   constructor(private productService: ProductServiceService, private router: Router) {}

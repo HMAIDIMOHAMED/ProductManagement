@@ -39,5 +39,20 @@ ngOnInit(): void{
 
   }
 
+  deleteProduct(name: string): void {
+    if (confirm(`Are you sure you want to delete product "${name}"?`)) {
+      this.productService.deleteProduct(name).subscribe(
+        () => {
+          alert(`Product "${name}" deleted successfully!`);
+          this.displayAllProducts(); 
+        },
+        error => {
+          alert(`Failed to delete product "${name}".`);
+          console.error('Error deleting product:', error);
+        }
+      );
+    }
+  }
+
 
 }
