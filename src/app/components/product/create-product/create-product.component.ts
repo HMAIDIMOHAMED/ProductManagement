@@ -11,9 +11,10 @@ export class CreateProductComponent implements OnInit {
 
   product: any = {
     name: '',
-    description: '',
-    price: '',
-    quantity: ''
+    n_inventaire: '',
+    affection: '',
+    date_achat: '',
+    ref_bc_match:''
   };
 
   constructor(private productService: ProductServiceService, private router: Router) {}

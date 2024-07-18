@@ -13,9 +13,10 @@ export class UpdateProductComponent {
   
   products: any = {
     name: '',
-    description: '',
-    price: '',
-    quantity: ''
+    n_inventaire: '',
+    affection: '',
+    date_achat: '',
+    ref_bc_march: ''
   };
   constructor( private activeRouter: ActivatedRoute, private productService: ProductServiceService, private router: Router){}
   name !: string;

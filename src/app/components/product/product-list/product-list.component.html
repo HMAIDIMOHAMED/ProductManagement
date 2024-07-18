@@ -2,18 +2,21 @@
     <thead>
       <tr>
         <th scope="col">Name</th>
-        <th scope="col">Description</th>
-        <th scope="col">Price</th>
-        <th scope="col">Quantity</th>
+        <th scope="col">Numéro Inventaire</th>
+        <th scope="col">Affection</th>
+        <th scope="col">Date d'Achat</th>
+        <th scope="col">Réferance</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let p of products">
         <td>{{ p.name }}</td>
-        <td>{{ p.description }}</td>
-        <td>{{ p.price }}</td>
-        <td>{{ p.quantity }}</td>
+        <td>{{ p.n_inventaire }}</td>
+        <td>{{ p.affection }}</td>
+        <td>{{ p.date_achat }}</td>
+        <td>{{ p.ref_bc_march }}</td>
+
         <td>
 
             <button class="btn btn-info" (click)="updateProduct(p.name)">Update</button>

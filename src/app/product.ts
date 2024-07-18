@@ -1,7 +1,8 @@
 export class Product {
 
     name !: string;
-    description !: string;
-    price !: string;
-    quantity !: string;
+    n_inventaire !: string;
+    affection !: string;
+    date_achat !: string;
+    ref_bc_march !:string
 }

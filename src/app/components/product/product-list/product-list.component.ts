@@ -12,9 +12,11 @@ export class ProductListComponent {
 
   products: any = {
     name: '',
-    description: '',
-    price: '',
-    quantity: ''
+    n_inventaire: '',
+    affection: '',
+    date_achat: '',
+    ref_bc_march: ''
+
   };
 
 ngOnInit(): void{
