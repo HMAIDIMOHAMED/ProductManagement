@@ -1,0 +1,21 @@
+<table class="table table-success table-striped-columns">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Numéro Inventaire</th>
+        <th scope="col">Affection</th>
+        <th scope="col">Date d'Achat</th>
+        <th scope="col">Réferance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{ p.name }}</td>
+        <td>{{ p.n_inventaire }}</td>
+        <td>{{ p.affection }}</td>
+        <td>{{ p.date_achat }}</td>
+        <td>{{ p.ref_bc_march }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

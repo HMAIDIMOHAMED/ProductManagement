@@ -52,7 +52,7 @@ export class AccountComponent {
   }
 
   goToHomePage(): void {
-    this.router.navigate(['/accueil']); // Redirection vers la page '/products'
+    this.router.navigate(['/userproducts']); 
   }
 
 }

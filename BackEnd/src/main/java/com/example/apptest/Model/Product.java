@@ -8,20 +8,22 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name="Product")
+@Table(name = "Product")
 @Data
 public class Product {
-    @Id
-    @Column(nullable = false,unique = false,length =45)
-    String name ;
-    @Column(nullable = false,unique = false,length =45)
-    String description ;
-    @Column(nullable = false,unique = false,length =45)
-    String price;
-    @Column(nullable = false,unique = false,length =45)
-    String quantity;
 
+  @Id
+  @Column(nullable = false, unique = false, length = 45)
+  private String name;
 
+  @Column(nullable = false, length = 45)
+  private String n_inventaire;
 
+  @Column(nullable = false, length = 45)
+  private String affection;
 
-}
+  @Column(name = "date_achat", nullable = false, length = 45)
+  private String date_achat;
+
+  @Column(name = "ref_bc_march", nullable = false, length = 45)
+  private String ref_bc_march;}

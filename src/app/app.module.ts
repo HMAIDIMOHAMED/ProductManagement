@@ -10,6 +10,9 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { CreateProductComponent } from './components/product/create-product/create-product.component';
 import { UpdateProductComponent } from './components/product/update-product/update-product.component';
+import { AdminloginComponent } from './components/admin/adminlogin/adminlogin.component';
+import { ProductListUserComponent } from './components/product/product-list-user/product-list-user.component';
+import { HomeComponent } from './components/FirstPage/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { UpdateProductComponent } from './components/product/update-product/upda
     AccueilComponent,
     ProductListComponent,
     CreateProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    AdminloginComponent,
+    ProductListUserComponent,
+    HomeComponent
     
   ],
   imports: [
