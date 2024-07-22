@@ -13,6 +13,8 @@ import { UpdateProductComponent } from './components/product/update-product/upda
 import { AdminloginComponent } from './components/admin/adminlogin/adminlogin.component';
 import { ProductListUserComponent } from './components/product/product-list-user/product-list-user.component';
 import { HomeComponent } from './components/FirstPage/home/home.component';
+import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HomeComponent } from './components/FirstPage/home/home.component';
     UpdateProductComponent,
     AdminloginComponent,
     ProductListUserComponent,
-    HomeComponent
+    HomeComponent,
+    AdminDashboardComponent
+  
     
   ],
   imports: [
