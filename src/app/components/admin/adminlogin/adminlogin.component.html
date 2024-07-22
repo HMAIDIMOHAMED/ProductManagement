@@ -1,24 +1,38 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card">
-          <form class="box">
-            <h1>Login</h1>
-            <p class="text-muted">Please enter your login and password!</p>
-            <input type="text" name="username" placeholder="Username" [(ngModel)]="admin.username">
-            <input type="password" name="password" placeholder="Password" [(ngModel)]="admin.password">
-            <a class="forgot text-muted" href="#">Forgot password?</a>
-            <input type="submit" (click)="adminLogin()" value="Login">
-            <div class="col-md-12">
-              <ul class="social-network social-circle">
-                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
-              </ul>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" [(ngModel)]="admin.username" name="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            
+            <div class="input-box">
+                <input type="password" placeholder="Password" [(ngModel)]="admin.password" name="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            
+
+            <div class="remember-forgot">
+                <label><input type="checkbox">RememberMe</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button  type="submit" class="btn" (click)="adminLogin()">Login</button>
+           
+            
+        </form>
+    </div>
+</body>
+</html>
