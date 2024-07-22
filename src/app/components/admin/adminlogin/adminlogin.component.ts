@@ -37,7 +37,7 @@ export class AdminloginComponent {
   }
 
   goToHomePage(): void {
-    this.router.navigate(['/accueil']); 
+    this.router.navigate(['/dashboard']); 
   }
 
 }

@@ -8,6 +8,7 @@ import { AccountComponent } from './components/account/account.component';
 import { AdminloginComponent } from './components/admin/adminlogin/adminlogin.component';
 import { ProductListUserComponent } from './components/product/product-list-user/product-list-user.component';
 import { HomeComponent } from './components/FirstPage/home/home.component';
+import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
 const routes: Routes = [
   { path: 'products', component: ProductListComponent },
   { path: 'addproduct', component: CreateProductComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path:'account',component:AccountComponent},
   {path:'adminlogin', component:AdminloginComponent},
   {path:'userproducts', component:ProductListUserComponent},
-  {path:'home', component:HomeComponent}
+  {path:'home', component:HomeComponent},
+  {path:'dashboard', component: AdminDashboardComponent}
 ];
 
 

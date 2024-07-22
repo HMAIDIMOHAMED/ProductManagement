@@ -1,0 +1,82 @@
+<div class="parent">
+    <div class="navbar">
+        <div class="logo">
+          <img src="https://cdn-icons-png.freepik.com/512/8686/8686102.png" alt="Logo">
+          <a  style="color: white; text-decoration: none;">DASHBOARD</a>
+        </div>
+        <div class="menu">
+          <a routerLink="/accueil">Tableau de bord</a>
+          <a routerLink="/addproduct">Ajouter</a>
+          <a routerLink="/products">Supprimer</a>
+          <a routerLink="/products">Modifier</a>
+          <a href="#">Requêtes</a>
+        </div>
+        <div class="perfil">
+          <div class="contenido-perfil">
+            <p>UTILISATEUR</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="Utilisateur">
+          </div>
+          <div class="desplegable">
+            <a href="#">Profil</a>
+            <a href="#">Paramètres</a>
+            <a href="#">Aide</a>
+            <a routerLink="/adminlogin">Déconnexion</a>
+          </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      
+      <div class="contenedor contenido-principal">
+        <div class="usuarios-barra">
+            <h2>Utilisateurs</h2>
+            <button class="btn btn-primary" >Ajouter Nouveau</button>
+        </div>
+        
+        <div class="busqueda-barra">
+            <input id="nombre" type="search" placeholder="Rechercher par ID">
+            <button class="btn btn-primary" >Rechercher</button>
+        </div>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Password</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let utilisateur of users">
+                    <td>{{ utilisateur.id }}</td>
+                    <td>{{ utilisateur.username }}</td>
+                    <td>{{ utilisateur.email}}</td>
+                    <td>{{ utilisateur.phone }}</td>
+                    <td>{{ utilisateur.password }}</td>
+                   
+                    <td>
+                        <button class="btn btn-info" >Éditer</button>
+                        <button class="btn btn-danger" (click)="deleteUser(utilisateur.id,utilisateur.username)">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="resumenTabla">
+          <p>Page précédente: <b>0</b></p>
+          <p>Page suivante: <b>2</b></p>
+          <p>Total des enregistrements: <b>3</b></p>
+          <p>Enregistrement initial: <b>1</b></p>
+          <p>Enregistrement final: <b>2</b></p>
+          <p>Taille de la page: <b>2</b></p>
+        </div>
+        <div class="paginacion"><button id="paginaAnterior"><i class="fas fa-arrow-left"></i></button>
+          <div id="contador">Page actuelle: 1</div><button id="paginaSiguiente"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+</div>
