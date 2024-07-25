@@ -5,7 +5,7 @@
           <a  style="color: white; text-decoration: none;">DASHBOARD</a>
         </div>
         <div class="menu">
-          <a routerLink="/accueil">Tableau de bord</a>
+          <a routerLink="/dashboard">Tableau de bord</a>
           <a routerLink="/addproduct">Ajouter</a>
           <a routerLink="/products">Supprimer</a>
           <a routerLink="/products">Modifier</a>
@@ -33,7 +33,7 @@
       <div class="contenedor contenido-principal">
         <div class="usuarios-barra">
             <h2>Utilisateurs</h2>
-            <button class="btn btn-primary" >Ajouter Nouveau</button>
+            <button class="btn btn-primary" routerLink="/addUserParAdmin">Ajouter Nouveau</button>
         </div>
         
         <div class="busqueda-barra">
@@ -61,7 +61,7 @@
                     <td>{{ utilisateur.password }}</td>
                    
                     <td>
-                        <button class="btn btn-info" >Éditer</button>
+                        <button class="btn btn-info" (click)="updateUser(utilisateur.id)" >Éditer</button>
                         <button class="btn btn-danger" (click)="deleteUser(utilisateur.id,utilisateur.username)">Supprimer</button>
                     </td>
                 </tr>

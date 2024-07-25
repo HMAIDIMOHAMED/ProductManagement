@@ -9,6 +9,8 @@ import { AdminloginComponent } from './components/admin/adminlogin/adminlogin.co
 import { ProductListUserComponent } from './components/product/product-list-user/product-list-user.component';
 import { HomeComponent } from './components/FirstPage/home/home.component';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
+import { AddUserComponent } from './components/admin/add-user/add-user.component';
+import { UpdateUserComponent } from './components/admin/update-user/update-user.component';
 const routes: Routes = [
   { path: 'products', component: ProductListComponent },
   { path: 'addproduct', component: CreateProductComponent },
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:'adminlogin', component:AdminloginComponent},
   {path:'userproducts', component:ProductListUserComponent},
   {path:'home', component:HomeComponent},
-  {path:'dashboard', component: AdminDashboardComponent}
+  {path:'dashboard', component: AdminDashboardComponent},
+  {path:'addUserParAdmin', component:AddUserComponent},
+  {path:'editUserParAdmin/:id', component:UpdateUserComponent}
 ];
 
 

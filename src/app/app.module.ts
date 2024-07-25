@@ -14,6 +14,8 @@ import { AdminloginComponent } from './components/admin/adminlogin/adminlogin.co
 import { ProductListUserComponent } from './components/product/product-list-user/product-list-user.component';
 import { HomeComponent } from './components/FirstPage/home/home.component';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
+import { AddUserComponent } from './components/admin/add-user/add-user.component';
+import { UpdateUserComponent } from './components/admin/update-user/update-user.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { AdminDashboardComponent } from './components/admin/admin-dashboard/admi
     AdminloginComponent,
     ProductListUserComponent,
     HomeComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    AddUserComponent,
+    UpdateUserComponent
   
     
   ],

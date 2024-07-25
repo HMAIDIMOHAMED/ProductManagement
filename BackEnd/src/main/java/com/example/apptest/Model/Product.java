@@ -26,4 +26,6 @@ public class Product {
   private String date_achat;
 
   @Column(name = "ref_bc_march", nullable = false, length = 45)
-  private String ref_bc_march;}
+  private String ref_bc_march;
+}
+

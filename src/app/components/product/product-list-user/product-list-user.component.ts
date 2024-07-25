@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductServiceService } from 'src/app/service/product-service.service';
 import { Router } from '@angular/router';
 
@@ -7,27 +7,18 @@ import { Router } from '@angular/router';
   templateUrl: './product-list-user.component.html',
   styleUrls: ['./product-list-user.component.css']
 })
-export class ProductListUserComponent {
-  constructor(private productService: ProductServiceService,private router: Router){}
+export class ProductListUserComponent implements OnInit {
+  products: any[] = []; 
 
-  products: any = {
-    name: '',
-    n_inventaire: '',
-    affection: '',
-    date_achat: '',
-    ref_bc_march: ''
+  constructor(private productService: ProductServiceService, private router: Router) {}
 
-  };
+  ngOnInit(): void {
+    this.displayAllProducts();
+  }
 
-ngOnInit(): void{
-  this.displayAllProducts();
-}
-
-
-  displayAllProducts(){
-    this.productService.displayAllProducts().subscribe(data=>{
-      this.products=data;
-    })
-   
+  displayAllProducts(): void {
+    this.productService.displayAllProducts().subscribe((data: any[]) => {
+      this.products = data; 
+    });
   }
 }

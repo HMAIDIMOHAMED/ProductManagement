@@ -73,13 +73,19 @@ public class UserController {
 
   @GetMapping("/email/{email}")
   public ResponseEntity<User> getUserByEmail(@PathVariable("email") String email) {
-    User user = userService.getUserByEmail(email);
-    if (user != null) {
-      return new ResponseEntity<>(user, HttpStatus.OK);
-    } else {
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    try {
+      User user = userService.getUserByEmail(email);
+      if (user != null) {
+        return new ResponseEntity<>(user, HttpStatus.OK);
+      } else {
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+      return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
+
   @DeleteMapping("/{id}")
   public ResponseEntity<Void> deleteUser(@PathVariable("id") Long id) {
     userService.deleteUser(id);
@@ -94,5 +100,6 @@ public class UserController {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }
+
 
 }

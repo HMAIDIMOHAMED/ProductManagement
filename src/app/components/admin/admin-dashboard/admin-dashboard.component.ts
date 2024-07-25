@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AdminServiceService } from 'src/app/service/admin-service.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/user';
+import { UpdateUserComponent } from '../update-user/update-user.component';
 @Component({
   selector: 'app-admin-dashboard',
   templateUrl: './admin-dashboard.component.html',
@@ -41,6 +42,11 @@ export class AdminDashboardComponent {
         }
       );
     }
+  }
+
+  updateUser(id: number){
+    console.log(id);
+    this.router.navigate(['editUserParAdmin', id])
   }
  
 
