@@ -32,8 +32,8 @@
       
       <div class="contenedor contenido-principal">
         <div class="usuarios-barra">
-            <h2>Utilisateurs</h2>
-            <button class="btn btn-primary" routerLink="/addUserParAdmin">Ajouter Nouveau</button>
+            <h2>Messages</h2>
+            
         </div>
         
         <div class="busqueda-barra">
@@ -45,25 +45,20 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Username</th>
+                    <th>Name</th>
                     <th>Email</th>
-                    <th>Phone</th>
-                    <th>Password</th>
-                    <th>Action</th>
+                    <th>Message</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let utilisateur of users">
-                    <td>{{ utilisateur.id }}</td>
-                    <td>{{ utilisateur.username }}</td>
-                    <td>{{ utilisateur.email}}</td>
-                    <td>{{ utilisateur.phone }}</td>
-                    <td>{{ utilisateur.password }}</td>
+                <tr *ngFor="let message of messages">
+                    <td>{{ message.id }}</td>
+                    <td>{{ message.name }}</td>
+                    <td>{{ message.email}}</td>
+                    <td>{{ message.message }}</td>
                    
-                    <td>
-                        <button class="btn btn-info" (click)="updateUser(utilisateur.id)" >Éditer</button>
-                        <button class="btn btn-danger" (click)="deleteUser(utilisateur.id,utilisateur.username)">Supprimer</button>
-                    </td>
+                   
+            
                 </tr>
             </tbody>
         </table>

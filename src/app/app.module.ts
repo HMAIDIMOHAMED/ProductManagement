@@ -16,6 +16,8 @@ import { HomeComponent } from './components/FirstPage/home/home.component';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
 import { AddUserComponent } from './components/admin/add-user/add-user.component';
 import { UpdateUserComponent } from './components/admin/update-user/update-user.component';
+import { ContactComponent } from './components/FirstPage/contact/contact.component';
+import { GetAllMessagesComponent } from './components/admin/get-all-messages/get-all-messages.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { UpdateUserComponent } from './components/admin/update-user/update-user.
     HomeComponent,
     AdminDashboardComponent,
     AddUserComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    ContactComponent,
+    GetAllMessagesComponent
   
     
   ],

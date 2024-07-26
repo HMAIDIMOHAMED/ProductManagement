@@ -11,6 +11,8 @@ import { HomeComponent } from './components/FirstPage/home/home.component';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
 import { AddUserComponent } from './components/admin/add-user/add-user.component';
 import { UpdateUserComponent } from './components/admin/update-user/update-user.component';
+import { ContactComponent } from './components/FirstPage/contact/contact.component';
+import { GetAllMessagesComponent } from './components/admin/get-all-messages/get-all-messages.component';
 const routes: Routes = [
   { path: 'products', component: ProductListComponent },
   { path: 'addproduct', component: CreateProductComponent },
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'dashboard', component: AdminDashboardComponent},
   {path:'addUserParAdmin', component:AddUserComponent},
-  {path:'editUserParAdmin/:id', component:UpdateUserComponent}
+  {path:'editUserParAdmin/:id', component:UpdateUserComponent},
+  {path: 'contact', component:ContactComponent},
+  {path: 'messagesdashboard', component: GetAllMessagesComponent}
 ];
 
 
