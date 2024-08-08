@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ProductListUserComponent implements OnInit {
   products: any[] = []; 
+  productName: string = '';
 
   constructor(private productService: ProductServiceService, private router: Router) {}
 
@@ -21,4 +22,16 @@ export class ProductListUserComponent implements OnInit {
       this.products = data; 
     });
   }
+  searchProductByName(): void {
+    this.productService.getProductByName(this.productName).subscribe(
+      (res) => {
+        console.log(res);
+        this.products= [res];
+      },
+      (error) => {
+        console.error("Error fetching posts:", error)
+      }
+    )
+  }
+
 }
