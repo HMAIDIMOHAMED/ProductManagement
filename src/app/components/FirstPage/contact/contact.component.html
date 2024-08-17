@@ -305,7 +305,10 @@
 	
 
 	
-	<form (ngSubmit)="addMessage()">
+	<form action="https://api.web3forms.com/submit" method="POST" (ngSubmit)="addMessage()">
+		<input type="hidden" name="access_key" value="db6ac238-08e6-4057-a2cf-7adeac39ad72
+		">
+
         <h1 class="title text-center mb-4">Talk to Us</h1>
       
         <div class="form-group position-relative">
