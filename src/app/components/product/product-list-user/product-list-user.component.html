@@ -40,6 +40,7 @@
               <th>Affection</th>
               <th>Date d'Achat</th>
               <th>Réf. BC/Marché</th>
+              <th>Action</th>
           </tr>
       </thead>
       <tbody>
@@ -49,6 +50,9 @@
               <td>{{ produit.affection }}</td>
               <td>{{ produit.date_achat }}</td>
               <td>{{ produit.ref_bc_march }}</td>
+              <td>
+                <button class="btn btn-primary" routerLink="/payment">Acheter</button>
+              </td>
           </tr>
       </tbody>
   </table>

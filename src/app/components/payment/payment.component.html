@@ -1,0 +1,67 @@
+
+
+<div class="container">
+   <div class="card-container">
+      <div class="front">
+         <div class="image">
+            <img src="../../image/chip.png" alt="">
+            <img src="../../image/visa.png" alt="">
+         </div>
+         <div class="card-number-box">{{ cardNumber || '################' }}</div>
+         <div class="flexbox">
+            <div class="box">
+               <span>card holder</span>
+               <div class="card-holder-name">{{ cardHolder || 'full name' }}</div>
+            </div>
+            <div class="box">
+               <span>expires</span>
+               <div class="expiration">
+                  <span class="exp-month">{{ expMonth || 'mm' }}</span>
+                  <span class="exp-year">{{ expYear || 'yy' }}</span>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="back">
+         <div class="stripe"></div>
+         <div class="box">
+            <span>cvv</span>
+            <div class="cvv-box">{{ cvv || '' }}</div>
+            <img src="../../image/visa.png" alt="">
+         </div>
+      </div>
+   </div>
+
+   <form (submit)="onSubmit()">
+      <div class="inputBox">
+         <span>card number</span>
+         <input type="text" maxlength="16" name="cardNumber" [(ngModel)]="cardNumber" class="card-number-input">
+      </div>
+      <div class="inputBox">
+         <span>card holder</span>
+         <input type="text" name="cardHolder" [(ngModel)]="cardHolder" class="card-holder-input">
+      </div>
+      <div class="flexbox">
+         <div class="inputBox">
+            <span>expiration mm</span>
+            <select name="expMonth" [(ngModel)]="expMonth" class="month-input">
+               <option value="" disabled selected>month</option>
+               <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>expiration yy</span>
+            <select name="expYear" [(ngModel)]="expYear" class="year-input">
+               <option value="" disabled selected>year</option>
+               <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>cvv</span>
+            <input type="text" maxlength="4" name="cvv" [(ngModel)]="cvv" class="cvv-input"
+               (mouseenter)="flipCard(true)" (mouseleave)="flipCard(false)">
+         </div>
+      </div>
+      <input type="submit" value="submit" class="submit-btn">
+   </form>
+</div>

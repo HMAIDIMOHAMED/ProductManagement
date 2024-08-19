@@ -14,6 +14,7 @@ import { UpdateUserComponent } from './components/admin/update-user/update-user.
 import { ContactComponent } from './components/FirstPage/contact/contact.component';
 import { GetAllMessagesComponent } from './components/admin/get-all-messages/get-all-messages.component';
 import { AboutUsComponent } from './components/FirstPage/about-us/about-us.component';
+import { PaymentComponent } from './components/payment/payment.component';
 const routes: Routes = [
   { path: 'products', component: ProductListComponent },
   { path: 'addproduct', component: CreateProductComponent },
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path:'editUserParAdmin/:id', component:UpdateUserComponent},
   {path: 'contact', component:ContactComponent},
   {path: 'messagesdashboard', component: GetAllMessagesComponent},
-  {path:'aboutus', component:AboutUsComponent}
+  {path:'aboutus', component:AboutUsComponent},
+  {path:'payment', component:PaymentComponent}
 ];
 
 

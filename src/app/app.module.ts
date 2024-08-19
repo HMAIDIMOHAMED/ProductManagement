@@ -19,6 +19,7 @@ import { UpdateUserComponent } from './components/admin/update-user/update-user.
 import { ContactComponent } from './components/FirstPage/contact/contact.component';
 import { GetAllMessagesComponent } from './components/admin/get-all-messages/get-all-messages.component';
 import { AboutUsComponent } from './components/FirstPage/about-us/about-us.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AboutUsComponent } from './components/FirstPage/about-us/about-us.compo
     UpdateUserComponent,
     ContactComponent,
     GetAllMessagesComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    PaymentComponent
   
     
   ],
